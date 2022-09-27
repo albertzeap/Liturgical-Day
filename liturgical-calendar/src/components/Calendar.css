@@ -1,0 +1,45 @@
+#date-contents{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+    color: #ecf7f7;
+    text-transform: uppercase;
+    height: 85vh;
+
+    
+}
+
+#season{
+    padding-bottom: 2rem;
+}
+
+li {
+    list-style: circle;
+    color: #513930;
+    padding: 0.5rem 0;
+}
+
+li:hover{
+    font-size: 1.2rem;
+}
+
+i {
+    color: #513930;
+}
+
+i:hover{
+    font-size: 2.5rem;
+}
+
+ul {
+    padding: 1rem 0;
+    text-align: center;
+}
+
+#celebrations > p{
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+}

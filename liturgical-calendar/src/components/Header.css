@@ -1,0 +1,44 @@
+.header{
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    background-color: #AFD5EB;
+    padding: 30px 30px;
+    font-style: italic;  
+    text-transform: uppercase;  
+    font-size:0.6rem;
+    text-align: center;
+}
+
+.header a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.header a:hover {
+    color: #513930;
+}
+
+
+.header-right > a {
+    padding: 0 2rem;
+}
+
+#maximum-home{
+    display: none;
+}
+
+@media (min-width: 30em){
+    .header{
+        font-size:1rem;
+    }
+
+    #maximum-home{
+        display: contents;
+    }
+
+    #minimum-home{
+        display: none;
+    }
+
+}
