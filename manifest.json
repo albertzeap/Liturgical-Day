@@ -1,0 +1,14 @@
+{
+    "manifest_version": 3,
+    "name": "Liturgical Day - New Tab",
+    "version": "1.0.0",
+    "description": "Displays current liturgical day with celebrations whenever a new tab is opened.",
+    "author": "Albert Paez",
+    "icons": {
+        "16": "/assets/icon16.png"
+      },
+    "chrome_url_overrides" : {
+        "newtab": "extension.html"
+    }
+    
+}
