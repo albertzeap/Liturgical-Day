@@ -20,10 +20,10 @@
                 </div>
             </div>
             <div id="date-contents">
-                <h1 id="date"></h1>
-                <h1 id="weekday"></h1>
-                <h1 id="week"></h1>
-                <h1 id="season"></h1>
+                <h1>Date: <i id="date">...</i></h1>
+                <h1>Today is <i id="weekday">...</i></h1>
+                <h1>Week <i id="week">...</i> of the</h1>
+                <h1><i id="season">...</i> season</h1>
                 <ul id="celebrations">
                     <p id=>celebrations</p>
                 </ul>
@@ -31,8 +31,13 @@
     </main>
 </body>
 <footer>
-    <p>Created by Albert Paez</p>
-    <p>Background from www.svgbackgrounds.com</p>
+    <div class="credits-container">
+        <p>Created by Albert Paez</p>
+        <p>Backgrounds from www.svgbackgrounds.com</p>
+    </div>
+    <div class="background-customize-container">
+        <button class="customize-button" onclick=changeBackground()>Change background</button>
+    </div>
 </footer>
 <script src="calendar.js"></script>
 </html>
