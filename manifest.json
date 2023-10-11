@@ -5,7 +5,10 @@
     "description": "Displays current liturgical day with celebrations whenever a new tab is opened.",
     "author": "Albert Paez",
     "icons": {
-        "16": "/assets/icon16.png"
+        "16": "/assets/icon16.png",
+        "32": "/assets/icon30.png",
+        "48": "/assets/icon40.png",
+        "128": "/assets/icon80.png"
       },
     "chrome_url_overrides" : {
         "newtab": "extension.html"

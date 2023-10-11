@@ -61,4 +61,6 @@ const changeBackground = () => {
     colorIndex = (colorIndex + 1) % colors.length;
 }
 
+
+
 renderDate();
