@@ -9,9 +9,12 @@
         "32": "/assets/icon30.png",
         "48": "/assets/icon40.png",
         "128": "/assets/icon80.png"
-      },
+    },
     "chrome_url_overrides" : {
         "newtab": "extension.html"
+    },
+    "action" : {
+        "default_popup": "popup.html"
     }
     
 }
