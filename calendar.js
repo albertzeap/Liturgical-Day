@@ -49,7 +49,6 @@ const renderDate = () => {
     fetchDate(dateToday);
 };
 
-
 // let primaryColorPicker = document.getElementById("primaryColorPicker");
 let secondaryColorPicker = document.getElementById("secondaryColorPicker");
 let backgroundColorPicker = document.getElementById("backgroundColorPicker");
@@ -104,7 +103,8 @@ const loadBackgroundColor = () => {
     }
 };
 
-
-setEventListeners();
-loadBackgroundColor();
+if (secondaryColorPicker){
+    setEventListeners();
+    loadBackgroundColor();
+}
 renderDate();
