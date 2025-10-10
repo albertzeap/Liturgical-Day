@@ -4,6 +4,7 @@ let weekday = document.getElementById("weekday");
 let week = document.getElementById("week");
 let season = document.getElementById("season");
 let celebrationsLi = document.getElementById("celebrations");
+let searchBtn = document.getElementById("search-btn")
 
 const fetchDate = async (dateToday) => {
     try {
@@ -65,6 +66,7 @@ const setEventListeners = () => {
             weekday.style.color = selectedSecondaryColor;
             week.style.color = selectedSecondaryColor;
             season.style.color = selectedSecondaryColor;
+            searchBtn.style.background = selectedSecondaryColor;
             celebrationsLi.style.color = selectedSecondaryColor;
         });
         chrome.storage.sync.set({ backgroundColor: selectedBackgroundColor }, () => {
@@ -90,7 +92,9 @@ const loadBackgroundColor = () => {
             week.style.color = color;
             season.style.color = color;
             celebrationsLi.style.color = color;
+            searchBtn.style.background = color;
             secondaryColorPicker.value = color;
+
         });
         chrome.storage.sync.get("backgroundColor", (data) => {
             const color = data.backgroundColor || '#AFD5EB'; 
