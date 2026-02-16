@@ -108,6 +108,31 @@ const loadBackgroundColor = () => {
   }
 };
 
+const searchOpenInSelect = document.getElementById("search-open-in");
+
+const loadSearchOpenInPreference = () => {
+  if (!searchOpenInSelect || typeof chrome === "undefined" || !chrome.storage)
+    return;
+  chrome.storage.sync.get("searchOpenInNewTab", (data) => {
+    const openInNewTab = data.searchOpenInNewTab === true;
+    searchOpenInSelect.value = openInNewTab ? "newtab" : "current";
+  });
+};
+
+const setSearchOpenInListener = () => {
+  if (!searchOpenInSelect || typeof chrome === "undefined" || !chrome.storage)
+    return;
+  searchOpenInSelect.addEventListener("change", () => {
+    const openInNewTab = searchOpenInSelect.value === "newtab";
+    chrome.storage.sync.set({ searchOpenInNewTab: openInNewTab });
+  });
+};
+
+if (searchOpenInSelect) {
+  loadSearchOpenInPreference();
+  setSearchOpenInListener();
+}
+
 if (secondaryColorPicker) {
   setEventListeners();
   loadBackgroundColor();

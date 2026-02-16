@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Liturgical Day - New Tab",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Displays current liturgical day with celebrations whenever a new tab is opened.",
   "author": "Albert Paez",
   "icons": {

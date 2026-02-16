@@ -75,7 +75,6 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
   margin-top: 2rem;
   width: 95%; /* relative to window width */
   max-width: 800px; /* prevent it from stretching too much */
@@ -108,6 +107,7 @@ body {
   color: #fff;
   border: none;
   border-radius: 0.5rem;
+  margin-left: 1rem;
   cursor: pointer;
   font-weight: 500;
   transition: all 0.3s ease;
@@ -116,6 +116,32 @@ body {
 #search-btn:hover {
   background: #357ae8;
   transform: translateY(-2px);
+}
+
+.search-open-in-row {
+  width: 100%;
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.search-open-in-label {
+  font-size: 0.9rem;
+  color: #ecf7f7;
+  white-space: nowrap;
+}
+
+#search-open-in {
+  padding: 0.4rem 0.6rem;
+  font-size: 0.9rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ddd;
+  background: #fff;
+  color: #333;
+  cursor: pointer;
 }
 
 /* List styling */
@@ -149,7 +175,6 @@ i {
   font-size: 1.5rem; /* Larger font */
   text-transform: uppercase; /* Uppercase letters */
   color: #ffffff; /* Match your theme */
-  margin-top: 2rem; /* Space above */
   margin-bottom: 1rem; /* Space below */
   letter-spacing: 1px; /* Optional spacing between letters */
   text-align: center; /* Centered */
