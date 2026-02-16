@@ -1,47 +1,79 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
     <title>Liturgical Calendar</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-</head>
-<body>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link
+      rel="stylesheet"
+      href="index.css"
+    />
+  </head>
+  <body>
     <main>
-        <div class="header">
-            <a id="maximum-home" href="/"><strong>Liturgical Calendar</strong></a>
-            <a id="minimum-home" href="/"><strong>LC</strong></a>
-            <div class="header-right">
-                <a href="/pages/about.html"><strong>About</strong></a>
-                <a href="/pages/contact.html"><strong>Contact</strong></a>
-                <!-- NEW: Gmail link -->
-                <a href="https://mail.google.com/mail/?authuser=0&ogbl" target="_blank" rel="noopener noreferrer"><strong>Gmail</strong></a>
-            </div>
+      <div class="header">
+        <a
+          id="maximum-home"
+          href="/"
+          ><strong>Liturgical Calendar</strong></a
+        >
+        <a
+          id="minimum-home"
+          href="/"
+          ><strong>LC</strong></a
+        >
+        <div class="header-right">
+          <!-- NEW: Gmail link -->
+          <a href="https://mail.google.com/mail/?authuser=0&ogbl"
+            ><strong>Gmail</strong></a
+          >
         </div>
+      </div>
 
-        <div id="date-contents">
-            <h1 id="date"></h1>
-            <h1 id="weekday"></h1>
-            <h1 id="week"></h1>
-            <h1 id="season"></h1>
-            <ul id="celebrations">
-                <p>celebrations</p>
-            </ul>
-        </div>
+      <div id="date-contents">
+        <h1 id="date"></h1>
+        <h1 id="weekday"></h1>
+        <h1 id="week"></h1>
+        <h1 id="season"></h1>
+        <ul id="celebrations">
+          <p>celebrations</p>
+        </ul>
+      </div>
 
-        <!-- NEW: Bottom-centered Google Search -->
-        <div class="google-search" aria-label="Google site search">
-            <form action="https://www.google.com/search" method="GET" target="_blank" role="search">
-                <label class="visually-hidden" for="gq">Search Google</label>
-                <input id="gq" type="text" name="q" placeholder="Search Google…" required>
-                <button type="submit">Google Search</button>
-            </form>
-        </div>
+      <!-- NEW: Bottom-centered Google Search -->
+      <div
+        class="google-search"
+        aria-label="Google site search"
+      >
+        <form
+          action="https://www.google.com/search"
+          method="GET"
+          target="_blank"
+          role="search"
+        >
+          <label
+            class="visually-hidden"
+            for="gq"
+            >Search Google</label
+          >
+          <input
+            id="gq"
+            type="text"
+            name="q"
+            placeholder="Search Google…"
+            required
+          />
+          <button type="submit">Google Search</button>
+        </form>
+      </div>
     </main>
-</body>
-<footer>
+  </body>
+  <footer>
     <p>Created by Albert Paez, Forked by Spencer Wozniak</p>
     <p>Background from www.svgbackgrounds.com</p>
-</footer>
-<script src="calendar.js"></script>
+  </footer>
+  <script src="calendar.js"></script>
 </html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Liturgical - New Tab</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <main>
+        <!-- Header -->
+            <div class="header">
+                <p id="maximum-home" href="/"><strong>Liturgical Day</strong> </p>
+                <p id="minimum-home"href="/"><strong>LC</strong> </p>
+                <div class="header-right">
+                </div>
+            </div>
+            <!-- Date Contents -->
+            <div id="date-contents">
+                <h1>Date: <i id="date">...</i></h1>
+                <h1>Today is <i id="weekday">...</i></h1>
+                <h1>Week <i id="week">...</i> of the</h1>
+                <h1><i id="season">...</i> season</h1>
+                <hr>
+                <!-- Search Box -->
+                <div class="search-container">
+                    <input type="text" id="search-bar" placeholder="Search...">
+                    <button id="search-btn">Search</button>
+                </div>
+                <!-- Celebration of the Day -->
+                <h1 id="celebrations-header">celebrations</h1>
+                <ul id="celebrations">
+                </ul>
+            </div>
+    </main>
+</body>
+<footer>
+    <div class="credits-container">
+        <p>Created by Albert Paez</p>
+        <p>Backgrounds from www.svgbackgrounds.com</p>
+    </div>
+    <div class="background-customize-container" id="customizeBox">
+        <!-- <input type="color" id="primaryColorPicker" value="#F5F5F5" /> -->
+        <input type="color" id="secondaryColorPicker" value="#513930" />
+        <input type="color" id="backgroundColorPicker" value="#AFD5EB" />
+        <button id="saveColor">Save Colors</button>
+        <button id="resetColor">Reset</button>
+    </div>
+    
+</footer>
+<script src="calendar.js"></script>
+<script src="search.js"></script>
+</html>
