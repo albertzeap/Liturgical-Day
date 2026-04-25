@@ -66,6 +66,7 @@ const setEventListeners = () => {
       week.style.color = selectedSecondaryColor;
       season.style.color = selectedSecondaryColor;
       searchBtn.style.background = selectedSecondaryColor;
+      searchBtn.style.color= selectedBackgroundColor;
       celebrationsLi.style.color = selectedSecondaryColor;
     });
     chrome.storage.sync.set(
