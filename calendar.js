@@ -55,6 +55,29 @@ let backgroundColorPicker = document.getElementById("backgroundColorPicker");
 let saveColorButton = document.getElementById("saveColor");
 let resetColorButton = document.getElementById("resetColor");
 
+/**
+ * Determines a high-contrast text color (black or white) for a given background color.
+ *
+ * Extracts the RGB components from a hex color string, then calculates the
+ * relative luminance using the WCAG formula (0.299R + 0.587G + 0.114B) / 255,
+ * which weights each channel by human eye sensitivity. If the resulting
+ * luminance exceeds 0.5 (light background), black is returned; otherwise
+ * white is returned.
+ *
+ * @param {string} hexColor - A hex color string (e.g. "#513930")
+ * @returns {string} Either "#000000" or "#ffffff"
+ */
+const getContrastColor = (hexColor) => {
+  const r = parseInt(hexColor.slice(1, 3), 16);
+  const g = parseInt(hexColor.slice(3, 5), 16);
+  const b = parseInt(hexColor.slice(5, 7), 16);
+
+  // Calculate relative luminance
+  const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+
+  return luminance > 0.5 ? "#000000" : "#ffffff";
+};
+
 const setEventListeners = () => {
   // Save the selected color to chrome storage
   saveColorButton.addEventListener("click", () => {
@@ -66,6 +89,7 @@ const setEventListeners = () => {
       week.style.color = selectedSecondaryColor;
       season.style.color = selectedSecondaryColor;
       searchBtn.style.background = selectedSecondaryColor;
+      searchBtn.style.color= getContrastColor(selectedSecondaryColor);
       celebrationsLi.style.color = selectedSecondaryColor;
     });
     chrome.storage.sync.set(
